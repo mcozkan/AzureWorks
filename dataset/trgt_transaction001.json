@@ -1,0 +1,12 @@
+{
+	"name": "trgt_transaction001",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ws-azsynapse001-WorkspaceDefaultSqlServer",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": []
+	}
+}
