@@ -1,0 +1,42 @@
+{
+	"name": "dl_bureau_source",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"data_bureau_balance": {
+				"type": "string",
+				"defaultValue": "bureau_balance.csv"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "bureau_balance.csv",
+				"fileSystem": "cont0001"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "SK_ID_BUREAU",
+				"type": "String"
+			},
+			{
+				"name": "MONTHS_BALANCE",
+				"type": "String"
+			},
+			{
+				"name": "STATUS",
+				"type": "String"
+			}
+		]
+	}
+}
