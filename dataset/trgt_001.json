@@ -1,0 +1,12 @@
+{
+	"name": "trgt_001",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "sql_trgt_001",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": []
+	}
+}
