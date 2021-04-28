@@ -1,0 +1,32 @@
+{
+	"name": "source",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "dl_source",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "Parquet1",
+						"type": "DatasetReference"
+					},
+					"name": "destination"
+				}
+			],
+			"transformations": [
+				{
+					"name": "Select1"
+				}
+			],
+			"script": "source(output(\n\t\tSK_ID_CURR as string,\n\t\tTARGET as string,\n\t\tNAME_CONTRACT_TYPE as string,\n\t\tCODE_GENDER as string,\n\t\tFLAG_OWN_CAR as string,\n\t\tFLAG_OWN_REALTY as string,\n\t\tCNT_CHILDREN as string,\n\t\tAMT_INCOME_TOTAL as string,\n\t\tAMT_CREDIT as string,\n\t\tAMT_ANNUITY as string,\n\t\tAMT_GOODS_PRICE as string,\n\t\tNAME_TYPE_SUITE as string,\n\t\tNAME_INCOME_TYPE as string,\n\t\tNAME_EDUCATION_TYPE as string,\n\t\tNAME_FAMILY_STATUS as string,\n\t\tNAME_HOUSING_TYPE as string,\n\t\tREGION_POPULATION_RELATIVE as string,\n\t\tDAYS_BIRTH as string,\n\t\tDAYS_EMPLOYED as string,\n\t\tDAYS_REGISTRATION as string,\n\t\tDAYS_ID_PUBLISH as string,\n\t\tOWN_CAR_AGE as string,\n\t\tFLAG_MOBIL as string,\n\t\tFLAG_EMP_PHONE as string,\n\t\tFLAG_WORK_PHONE as string,\n\t\tFLAG_CONT_MOBILE as string,\n\t\tFLAG_PHONE as string,\n\t\tFLAG_EMAIL as string,\n\t\tOCCUPATION_TYPE as string,\n\t\tCNT_FAM_MEMBERS as string,\n\t\tREGION_RATING_CLIENT as string,\n\t\tREGION_RATING_CLIENT_W_CITY as string,\n\t\tWEEKDAY_APPR_PROCESS_START as string,\n\t\tHOUR_APPR_PROCESS_START as string,\n\t\tREG_REGION_NOT_LIVE_REGION as string,\n\t\tREG_REGION_NOT_WORK_REGION as string,\n\t\tLIVE_REGION_NOT_WORK_REGION as string,\n\t\tREG_CITY_NOT_LIVE_CITY as string,\n\t\tREG_CITY_NOT_WORK_CITY as string,\n\t\tLIVE_CITY_NOT_WORK_CITY as string,\n\t\tORGANIZATION_TYPE as string,\n\t\tEXT_SOURCE_1 as string,\n\t\tEXT_SOURCE_2 as string,\n\t\tEXT_SOURCE_3 as string,\n\t\tAPARTMENTS_AVG as string,\n\t\tBASEMENTAREA_AVG as string,\n\t\tYEARS_BEGINEXPLUATATION_AVG as string,\n\t\tYEARS_BUILD_AVG as string,\n\t\tCOMMONAREA_AVG as string,\n\t\tELEVATORS_AVG as string,\n\t\tENTRANCES_AVG as string,\n\t\tFLOORSMAX_AVG as string,\n\t\tFLOORSMIN_AVG as string,\n\t\tLANDAREA_AVG as string,\n\t\tLIVINGAPARTMENTS_AVG as string,\n\t\tLIVINGAREA_AVG as string,\n\t\tNONLIVINGAPARTMENTS_AVG as string,\n\t\tNONLIVINGAREA_AVG as string,\n\t\tAPARTMENTS_MODE as string,\n\t\tBASEMENTAREA_MODE as string,\n\t\tYEARS_BEGINEXPLUATATION_MODE as string,\n\t\tYEARS_BUILD_MODE as string,\n\t\tCOMMONAREA_MODE as string,\n\t\tELEVATORS_MODE as string,\n\t\tENTRANCES_MODE as string,\n\t\tFLOORSMAX_MODE as string,\n\t\tFLOORSMIN_MODE as string,\n\t\tLANDAREA_MODE as string,\n\t\tLIVINGAPARTMENTS_MODE as string,\n\t\tLIVINGAREA_MODE as string,\n\t\tNONLIVINGAPARTMENTS_MODE as string,\n\t\tNONLIVINGAREA_MODE as string,\n\t\tAPARTMENTS_MEDI as string,\n\t\tBASEMENTAREA_MEDI as string,\n\t\tYEARS_BEGINEXPLUATATION_MEDI as string,\n\t\tYEARS_BUILD_MEDI as string,\n\t\tCOMMONAREA_MEDI as string,\n\t\tELEVATORS_MEDI as string,\n\t\tENTRANCES_MEDI as string,\n\t\tFLOORSMAX_MEDI as string,\n\t\tFLOORSMIN_MEDI as string,\n\t\tLANDAREA_MEDI as string,\n\t\tLIVINGAPARTMENTS_MEDI as string,\n\t\tLIVINGAREA_MEDI as string,\n\t\tNONLIVINGAPARTMENTS_MEDI as string,\n\t\tNONLIVINGAREA_MEDI as string,\n\t\tFONDKAPREMONT_MODE as string,\n\t\tHOUSETYPE_MODE as string,\n\t\tTOTALAREA_MODE as string,\n\t\tWALLSMATERIAL_MODE as string,\n\t\tEMERGENCYSTATE_MODE as string,\n\t\tOBS_30_CNT_SOCIAL_CIRCLE as string,\n\t\tDEF_30_CNT_SOCIAL_CIRCLE as string,\n\t\tOBS_60_CNT_SOCIAL_CIRCLE as string,\n\t\tDEF_60_CNT_SOCIAL_CIRCLE as string,\n\t\tDAYS_LAST_PHONE_CHANGE as string,\n\t\tFLAG_DOCUMENT_2 as string,\n\t\tFLAG_DOCUMENT_3 as string,\n\t\tFLAG_DOCUMENT_4 as string,\n\t\tFLAG_DOCUMENT_5 as string,\n\t\tFLAG_DOCUMENT_6 as string,\n\t\tFLAG_DOCUMENT_7 as string,\n\t\tFLAG_DOCUMENT_8 as string,\n\t\tFLAG_DOCUMENT_9 as string,\n\t\tFLAG_DOCUMENT_10 as string,\n\t\tFLAG_DOCUMENT_11 as string,\n\t\tFLAG_DOCUMENT_12 as string,\n\t\tFLAG_DOCUMENT_13 as string,\n\t\tFLAG_DOCUMENT_14 as string,\n\t\tFLAG_DOCUMENT_15 as string,\n\t\tFLAG_DOCUMENT_16 as string,\n\t\tFLAG_DOCUMENT_17 as string,\n\t\tFLAG_DOCUMENT_18 as string,\n\t\tFLAG_DOCUMENT_19 as string,\n\t\tFLAG_DOCUMENT_20 as string,\n\t\tFLAG_DOCUMENT_21 as string,\n\t\tAMT_REQ_CREDIT_BUREAU_HOUR as string,\n\t\tAMT_REQ_CREDIT_BUREAU_DAY as string,\n\t\tAMT_REQ_CREDIT_BUREAU_WEEK as string,\n\t\tAMT_REQ_CREDIT_BUREAU_MON as string,\n\t\tAMT_REQ_CREDIT_BUREAU_QRT as string,\n\t\tAMT_REQ_CREDIT_BUREAU_YEAR as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> source1\nsource1 select(mapColumn(\n\t\tSK_ID_CURR,\n\t\tTARGET,\n\t\tNAME_CONTRACT_TYPE,\n\t\tCODE_GENDER,\n\t\tFLAG_OWN_CAR,\n\t\tFLAG_OWN_REALTY,\n\t\tCNT_CHILDREN,\n\t\tAMT_INCOME_TOTAL,\n\t\tAMT_CREDIT,\n\t\tAMT_ANNUITY,\n\t\tAMT_GOODS_PRICE,\n\t\tNAME_TYPE_SUITE,\n\t\tNAME_INCOME_TYPE,\n\t\tNAME_EDUCATION_TYPE,\n\t\tNAME_FAMILY_STATUS,\n\t\tNAME_HOUSING_TYPE,\n\t\tREGION_POPULATION_RELATIVE,\n\t\tDAYS_BIRTH,\n\t\tDAYS_EMPLOYED,\n\t\tDAYS_REGISTRATION,\n\t\tDAYS_ID_PUBLISH,\n\t\tOWN_CAR_AGE,\n\t\tFLAG_MOBIL,\n\t\tFLAG_EMP_PHONE,\n\t\tFLAG_WORK_PHONE,\n\t\tFLAG_CONT_MOBILE,\n\t\tFLAG_PHONE,\n\t\tFLAG_EMAIL,\n\t\tOCCUPATION_TYPE,\n\t\tCNT_FAM_MEMBERS,\n\t\tREGION_RATING_CLIENT,\n\t\tAMT_REQ_CREDIT_BUREAU_HOUR,\n\t\tAMT_REQ_CREDIT_BUREAU_DAY,\n\t\tAMT_REQ_CREDIT_BUREAU_WEEK,\n\t\tAMT_REQ_CREDIT_BUREAU_MON,\n\t\tAMT_REQ_CREDIT_BUREAU_QRT,\n\t\tAMT_REQ_CREDIT_BUREAU_YEAR\n\t),\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> Select1\nSelect1 sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tformat: 'parquet',\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> destination"
+		}
+	}
+}
